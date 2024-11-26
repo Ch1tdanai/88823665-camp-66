@@ -5,59 +5,98 @@
         <meta charset="UTF-8"/>
     </head>
     <body>
-        <table>
-            <tr>
-            <th></th>
-            </tr>
-            <tr>
-            <td scope="row">ชื่อ</td>
-            <td><form>
-                <input type="text" id="fname" name="fname">
-                </form></td>
-            
-            </tr>
-            <tr>
-            <td scope="row">สกุล</td>
-            <td><form>
-                <input type="text" id="Sname" name="Sname">
-                </form></td>
-            
-            </tr>
-            <tr>
-                <td scope="row">วัน/เดือน/ปีเกิด</td>
-                <td><form>
-                    <input type="date" id="date" name="date" >
-                    </form></td>
-                
-            </tr>
-            <tr>
-                <td scope="row">อายุ</td>
-                <td><form>
-                    <input type="number" id="Old" name="Old">
-                    </form></td>
-                
-            </tr>
-            <tr>
-                <td scope="row">เพศ</td>
-                <td><form>
-                    <input type="radio" id="Man" name="Gender" value="Man">
-                    <label for="Man">ชาย</label>
-                    <input type="radio" id="Girl" name="Gender" value="Girl">
-                    <label for="Girl">หญิง</label>
-                    </form></td>
-                
-            </tr>
-            <tr>
-                <td scope="row">รูป</td>
-                <td><form>
-                    <input type="file" id="Old" name="Old">
-                    </form></td>
-                
-            </tr>
-            <td><form>
-                <input type="text" id="Sname" name="Sname">
-                </form></td>
-            </tr>
-        </table>
+        <form id="mainForm">
+            <table>
+                <tr>
+                    <td scope="row">ชื่อ</td>
+                    <td>
+                        <input type="text" id="fname" name="fname">
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">สกุล</td>
+                    <td>
+                        <input type="text" id="Sname" name="Sname">
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">วัน/เดือน/ปีเกิด</td>
+                    <td>
+                        <input type="date" id="date" name="date">
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">อายุ</td>
+                    <td>
+                        <input type="number" id="Old" name="Old">
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">เพศ</td>
+                    <td>
+                        <input type="radio" id="Man" name="Gender" value="Man">
+                        <label for="Man">ชาย</label>
+                        <input type="radio" id="Girl" name="Gender" value="Girl">
+                        <label for="Girl">หญิง</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">รูป</td>
+                    <td>
+                        <input type="file" id="Picture" name="Picture">
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">ที่อยู่</td>
+                    <td>
+                        <textarea rows="6" cols="25" id="Address" name="Address"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">สีที่ชอบ</td>
+                    <td>
+                        <select id="cars" name="cars" size="1">
+                            <option value="red">สีแดง</option>
+                            <option value="yellow">สีเหลือง</option>
+                            <option value="blue">สีน้ำเงิน</option>
+                            <option value="green">สีเขียว</option>
+                            <option value="purple">สีม่วง</option>
+                            <option value="soft_blue">สีฟ้า</option>
+                            <option value="pink">สีชมพู</option>
+                            <option value="orange">สีส้ม</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td scope="row">แนวเพลงที่ชอบ</td>
+                    <td>
+                        <input type="radio" id="for_life" name="Song" value="for_life">
+                        <label for="for_life">เพื่อชีวิต</label>
+                        <input type="radio" id="looktoong" name="Song" value="looktoong">
+                        <label for="looktoong">ลูกทุ่ง</label>
+                        <input type="radio" id="other" name="Song" value="other">
+                        <label for="other">อื่นๆ</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                        <input type="checkbox" id="accept" name="accept" value="accept">
+                        <label for="accept">ยินยอมให้เก็บข้อมูล</label>
+                        <br><br>
+                    </td>
+                </tr>
+                <tfoot>
+                    <tr>
+                        <td>
+                            <input type="reset" value="Reset"><br>
+                        </td>
+                        <td>
+                            <button type="submit">Submit</button>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </form>
     </body>
 </html>
