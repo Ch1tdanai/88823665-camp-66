@@ -1,0 +1,82 @@
+form {
+    font-family: "Sarabun", sans-serif; 
+    color: black;
+    font-size: medium;
+}
+test {
+    
+    color: blue;
+    font-size: 30px;
+}
+#hello:hover {
+    font-family: sans-serif;
+    color: blueviolet;
+    font-size: 30px;
+}
+.test:active {
+    color: brown;
+    font-size: 18px;
+}
+#hello-.test {
+    color: aquamarine;
+    font-size: 20px;
+}
+h1{
+    padding-left: 20px;
+    border-style: dashed;
+    border-width: 2px;
+    border-radius: 5px;
+    border-top-style: dotted;
+    border-color: blue;
+    margin-top: -10px;
+}
+table:hover {
+    border-color: aqua;
+}
+tr:hover {
+    border-color: aqua;
+}
+#fname:hover {
+    border-color: tomato;
+}
+#Surname:hover {
+    border-color: tomato;
+}
+#date:hover {
+    border-color: tomato;
+}
+#age:hover {
+    border-color: tomato;
+}
+#Man:hover {
+    border-color: tomato;
+}
+
+#Girl:hover {
+    border-color: tomato;
+}
+#Picture:hover {
+    border-color: tomato;
+}
+#Address:hover {
+    border-color: tomato;
+}
+#colors:hover {
+    border-color: tomato;
+}
+#for_life:hover {
+    border-color: tomato;
+}
+#looktoong:hover {
+    border-color: tomato;
+}
+#other:hover {
+    border-color: tomato;
+}
+
+#accept:hover {
+    border-color: tomato;
+}
+
+
+
