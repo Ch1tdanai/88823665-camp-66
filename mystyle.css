@@ -3,6 +3,7 @@ form {
     color: black;
     font-size: medium;
 }
+
 test {
     
     color: blue;
@@ -21,20 +22,19 @@ test {
     color: aquamarine;
     font-size: 20px;
 }
-h1{
-    padding-left: 20px;
-    border-style: dashed;
-    border-width: 2px;
-    border-radius: 5px;
-    border-top-style: dotted;
-    border-color: blue;
-    margin-top: -10px;
-}
+
 table:hover {
+    
     border-color: aqua;
 }
 tr:hover {
     border-color: aqua;
+}
+td:hover{
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    color: white;
+    border-color: aqua;
+    animation: 3s spin linear infinite;
 }
 #fname:hover {
     border-color: tomato;
@@ -77,6 +77,61 @@ tr:hover {
 #accept:hover {
     border-color: tomato;
 }
-
-
-
+.container {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    margin: auto;
+    /* margin-top: 20vh; */
+    background: #0b1a5e;
+    border-radius: 120px;
+    z-index: -2;
+  }
+  .tree-triangle3 {
+    position: absolute;
+    width: 66%;
+    height: 36%;
+    bottom: 20%;
+    left: 3.5%;
+    background: #034f33;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  .tree-triangle2 {
+    position: absolute;
+    width: 53%;
+    height: 33%;
+    bottom: 35%;
+    left: 10%;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: #046944;
+    z-index: 2;
+  }
+  .tree-triangle1 {
+    position: absolute;
+    width: 42%;
+    height: 25%;
+    bottom: 50%;
+    left: 15.5%;
+    background: #038052;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    z-index: 3;
+  }
+  .trunk {
+    position: absolute;
+    width: 10%;
+    height: 16%;
+    background: #66503e;
+    z-index: -1;
+    bottom: 5%;
+    left: 32%;
+  }
+  .star {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    background: #ffe380;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    left: 26.5%;
+    top: 11%;
+    z-index: 4;
+  }
