@@ -36,47 +36,69 @@ td:hover{
     border-color: aqua;
     animation: 3s spin linear infinite;
 }
-#fname:hover {
+#fname:active {
+    background-color: #00ff99;
     border-color: tomato;
 }
-#Surname:hover {
+#Surname:active {
+    background-color: #00ff99;
     border-color: tomato;
 }
-#date:hover {
+#date:active {
+    background-color: #00ff99;
     border-color: tomato;
 }
-#age:hover {
+#age:active {
+    background-color: #00ff99;
     border-color: tomato;
 }
-#Man:hover {
-    border-color: tomato;
-}
-
-#Girl:hover {
-    border-color: tomato;
-}
-#Picture:hover {
-    border-color: tomato;
-}
-#Address:hover {
-    border-color: tomato;
-}
-#colors:hover {
-    border-color: tomato;
-}
-#for_life:hover {
-    border-color: tomato;
-}
-#looktoong:hover {
-    border-color: tomato;
-}
-#other:hover {
+#Man:active {
+    background-color: #00ff99;
     border-color: tomato;
 }
 
-#accept:hover {
+#Girl:active{
+    background-color: #00ff99;
     border-color: tomato;
 }
+#Picture:active {
+    background-color: #00ff99;
+    border-color: tomato;
+}
+#Address:active {
+    background-color: #00ff99;
+    border-color: tomato;
+}
+#colors:active {
+    background-color: #00ff99;
+    border-color: tomato;
+}
+#for_life:active {
+    background-color: #00ff99;
+    border-color: tomato;
+}
+#looktoong:active{
+    background-color: #00ff99;
+    border-color: tomato;
+}
+#other:active {
+    background-color: #00ff99;
+    border-color: tomato;
+}
+
+#accept:active {
+    background-color: #00ff99;
+    border-color: tomato;
+}
+
+
+
+
+
+
+
+
+
 .container {
     position: relative;
     width: 380px;
