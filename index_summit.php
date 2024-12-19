@@ -7,8 +7,8 @@
     <body>
         <div class="container mt-5">
             <h1>email : <?php if(isset($_POST['email'])){echo $_POST['email'];}  ?></h1>
-            <h1>detail : <?php echo isset($_REQUEST['detail']) ?  $_REQUEST['detail'] : ""  ?></h1>
-            <form method="post" action="php_01.php">
+            <h1>detail : <?php if(isset($_REQUEST['detail'])){echo $_REQUEST['detail'];}  ?></h1>
+            <form method="post" action="index.php">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Email address</label>
                     <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
