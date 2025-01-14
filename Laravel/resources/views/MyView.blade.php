@@ -6,37 +6,24 @@
     <title>Multiplication Table</title>
 </head>
 <body>
-    <h1>ตารางสูตรคูณ</h1>
-    <form method="POST" action="/multiplication">
-        @csrf
-        <label for="number">เลือกแม่สูตรคูณ:</label>
-        <select name="number" id="number">
-            @for ($i = 1; $i <= 12; $i++)
-                <option value="{{ $i }}" {{ $i == $selectedNumber ? 'selected' : '' }}>
-                    {{ $i }}
-                </option>
-            @endfor
-        </select>
-        <button type="submit">ดูตาราง</button>
-    </form>
+    <h1>ตารางสูตรคูณแม่ {{ $number }}</h1>
 
-    <h2>แม่ {{ $selectedNumber }}</h2>
-    <table border="1" cellpadding="10">
+    <table border="1" cellpadding="10" cellspacing="0">
         <thead>
             <tr>
-                <th>ลำดับ</th>
-                <th>สูตรคูณ</th>
-                <th>ผลลัพธ์</th>
+                <th>ตัวตั้ง</th>
+                <th>ตัวคูณ</th>
+                <th>ผลลัพท์</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($multiplicationTable as $index => $result)
+            @for ($i = 1; $i <= 12; $i++)
                 <tr>
-                    <td>{{ $index + 1 }}</td>
-                    <td>{{ $selectedNumber }} × {{ $index + 1 }}</td>
-                    <td>{{ $result }}</td>
+                    <td>{{ $number }}</td>
+                    <td>{{ $i }}</td>
+                    <td>{{ $number * $i }}</td>
                 </tr>
-            @endforeach
+            @endfor
         </tbody>
     </table>
 </body>
