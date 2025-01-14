@@ -6,26 +6,27 @@ use Illuminate\Http\Request;
 
 class MyController extends Controller
 {
-    // แสดงฟอร์มให้ผู้ใช้กรอกข้อมูล
+    // แสดงฟอร์มให้ผู้ใช้กรอกแม่สูตรคูณ
     public function index()
     {
-        return view('multiplication');
+        return view('MyView');
     }
 
-    // รับค่าและสร้างตารางสูตรคูณ
+    // รับค่าจากฟอร์มและแสดงตารางสูตรคูณ
     public function generateTable(Request $request)
     {
-        $validated = $request->validate([
-            'number' => 'required|integer|min:1|max:12',
-        ]);
-
-        $number = $validated['number'];
+        $multiplier = $request->input('multiplier'); // รับค่าแม่สูตรคูณจากฟอร์ม
         $table = [];
-        for ($i = 1; $i <= 12; $i++) {
-            $table[] = $number * $i;
+
+        // คำนวณตารางสูตรคูณ
+        for ($i = 1; $i <= 10; $i++) {
+            $table[] = [
+                'number' => $i,
+                'result' => $multiplier * $i
+            ];
         }
 
-        return view('multiplication', compact('table', 'number'));
+        return view('MyView', compact('multiplier', 'table'));
     }
 }
 
