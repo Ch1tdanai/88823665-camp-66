@@ -7,4 +7,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/multiplication/{number}', [MyController::class, 'multiplicationTable']);
+Route::get('/multiplication', [MyController::class, 'index']);
+Route::post('/multiplication', [MyController::class, 'generateTable']);
