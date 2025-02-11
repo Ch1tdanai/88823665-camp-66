@@ -11,7 +11,7 @@ class AuthMiddleware
     public function handle(Request $request, Closure $next)
     {
         if (!Session::has('user')) {
-            return redirect()->route('login');
+            return redirect()->route('logined');
         }
 
         return $next($request);
