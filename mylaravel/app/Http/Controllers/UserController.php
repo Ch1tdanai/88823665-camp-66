@@ -9,7 +9,7 @@ class UserController extends Controller
 
     function index(){
         $users = User::all();
-        return view('user',['users'=>$users]);
+        return view('user.index',['users'=>$users]);
     }
     function edit($id){
         $user = User::find(id: $id);
@@ -21,7 +21,7 @@ class UserController extends Controller
         $user->email = $req->email;
         $user->password = ($req->password)==null?$user->password:$req->password;
         $user->save();
-        return redirect('user');
+        return redirect('user.index');
     }
     function delete(Request $req){
         $user = User::find($req->id);

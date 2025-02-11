@@ -6,11 +6,13 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
+use App\Http\Middleware\AuthMiddleware;
 
+// Route::get('/',function(){
+//     return view('layouts.default');
+// });
 
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::get('/hello', function () {
     return "<h1>Hello world</h1>";
 });
@@ -20,15 +22,8 @@ Route::get("/mycontroller/{id?}",
 Route::post('/mycontroller/{id?}',
 [Mycontroller::class,'myfunction']);
 
-Route::get('/',function(){
-    return view('layouts.default');
-});
-
-Route::get('/home',function(){
-    return view('home');
-});
-
-Route::get('/login',[LoginController::class,'index']);
+Route::get('login', [LoginController::class, 'index'])->name('login');
+Route::post('login', [LoginController::class, 'login']);
 
 Route::get('/register',[RegisterController::class,'index']);
 
@@ -44,3 +39,6 @@ Route::delete('/user',[UserController::class,'delete']);
 
 Route::get("/500", [HomeController::class, 'error500']);
 Route::get("/404", [HomeController::class, 'error404']);
+
+Route::get('/', [HomeController::class, 'index'])->middleware([AuthMiddleware::class],);
+Route::get("/product", [ProductController::class, 'index']);
