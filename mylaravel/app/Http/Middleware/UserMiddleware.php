@@ -5,11 +5,8 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Illuminate\Support\Facades\Auth;
-use Spatie\Permission\Exceptions\UnauthorizedException;
-use Spatie\Permission\Traits\HasRoles;
 
-class AuthMiddleware
+class UserMiddleware
 {
     /**
      * Handle an incoming request.
@@ -18,10 +15,10 @@ class AuthMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (!Auth::user() || !Auth::user()->hasRole('user')) {
-            throw UnauthorizedException::forPermissions(['user']);
+        $user = session('user');
+        if ($user == null || $user ->id == null ) {
+            return redirect('/login');
         }
-
         return $next($request);
     }
 }

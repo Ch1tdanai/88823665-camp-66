@@ -28,8 +28,8 @@ class RegisterController extends Controller
             'email' => $req->email,
             'password' => $req->password
         ]);
-        $user->assignRole('user');
-        
-        return redirect('/login');
+
+        // session(['user' => $user]);
+        return redirect('/home');
     }
 }
