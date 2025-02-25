@@ -2,11 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\AuthMiddleware;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Routing\Controller;
+
 
 class HomeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(AuthMiddleware::class);
+    }
+
     public function index()
     {
         return view('home');

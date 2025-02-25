@@ -46,6 +46,11 @@ Route::delete('/user/{id}', [UserController::class, 'delete'])->name('user.delet
 
 Route::get("/500", [HomeController::class, 'error500']);
 Route::get("/404", [HomeController::class, 'error404']);
-Route::get('/home', [HomeController::class, 'index']);
-Route::post('/home', [HomeController::class, 'index'])->middleware([AuthMiddleware::class]);
+Route::get('/home', [HomeController::class, 'index'])->middleware('user')->name('home');
+Route::post('/home', [HomeController::class, 'index']);
 Route::get("/product", [ProductController::class, 'index']);
+Route::post("/product", [ProductController::class, 'creat_product']);
+Route::post("/category", [ProductController::class, 'create_category']);
+
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+

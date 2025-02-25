@@ -23,11 +23,13 @@ class RegisterController extends Controller
         // if there is no name generate one
 
 
-        User::create([
+        $user = User::create([
             'name' => $req->name,
             'email' => $req->email,
             'password' => $req->password
         ]);
-        return redirect('/user');
+        $user->assignRole('user');
+        
+        return redirect('/login');
     }
 }
