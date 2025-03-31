@@ -12,7 +12,7 @@ class ProductController extends Controller
         $category = Categories::all();
         $product = Product_list::all();
         $Users = User::all();
-        return view('/product',['user'=>$Users,'categorys'=>$category,'products'=>$product]);
+        return view('/product',['user'=>$Users,'categorys'=>$category,'products'=>$product]); // compact('category','product')
     }
     function store(Request $req){
         $stock = new Categories();
