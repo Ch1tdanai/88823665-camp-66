@@ -62,7 +62,7 @@
                     <!--<button type="button" class="btn" onclick="clickme()">TEST JS</button>-->
                     <!-- /.social-auth-links -->
                     <p class="mb-0">
-                        <a href="login.html" class="text-center"> I already have a membership </a>
+                        <a href="{{url('/login')}}" class="text-center"> I already have a membership </a>
                     </p>
                 </div>
                 <!-- /.register-card-body -->
